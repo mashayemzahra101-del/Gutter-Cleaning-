@@ -1,0 +1,96 @@
+{
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "redirects": [
+    {
+      "source": "/index.html",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/about.html",
+      "destination": "/about",
+      "permanent": true
+    },
+    {
+      "source": "/blog.html",
+      "destination": "/blog",
+      "permanent": true
+    },
+    {
+      "source": "/contact.html",
+      "destination": "/contact",
+      "permanent": true
+    },
+    {
+      "source": "/gutter-cleaning.html",
+      "destination": "/gutter-cleaning",
+      "permanent": true
+    },
+    {
+      "source": "/gutter-cleaning-bayview-park.html",
+      "destination": "/gutter-cleaning-bayview-park",
+      "permanent": true
+    },
+    {
+      "source": "/gutter-cleaning-country-club-of-naples.html",
+      "destination": "/gutter-cleaning-country-club-of-naples",
+      "permanent": true
+    },
+    {
+      "source": "/gutter-cleaning-naples-park-central-hotel.html",
+      "destination": "/gutter-cleaning-naples-park-central-hotel",
+      "permanent": true
+    },
+    {
+      "source": "/gutter-cleaning-naples-zoo-at-caribbean-gardens.html",
+      "destination": "/gutter-cleaning-naples-zoo-at-caribbean-gardens",
+      "permanent": true
+    },
+    {
+      "source": "/gutter-cleaning-park-shore.html",
+      "destination": "/gutter-cleaning-park-shore",
+      "permanent": true
+    },
+    {
+      "source": "/gutter-guard-cleaning.html",
+      "destination": "/gutter-guard-cleaning",
+      "permanent": true
+    },
+    {
+      "source": "/gutter-inspection.html",
+      "destination": "/gutter-inspection",
+      "permanent": true
+    },
+    {
+      "source": "/gutter-leak-repair.html",
+      "destination": "/gutter-leak-repair",
+      "permanent": true
+    },
+    {
+      "source": "/gutter-maintenance.html",
+      "destination": "/gutter-maintenance",
+      "permanent": true
+    },
+    {
+      "source": "/gutter-repair.html",
+      "destination": "/gutter-repair",
+      "permanent": true
+    },
+    {
+      "source": "/locations.html",
+      "destination": "/locations",
+      "permanent": true
+    },
+    {
+      "source": "/privacy-policy.html",
+      "destination": "/privacy-policy",
+      "permanent": true
+    },
+    {
+      "source": "/services.html",
+      "destination": "/services",
+      "permanent": true
+    }
+  ]
+}
