@@ -1,0 +1,22 @@
+# robots.txt for Gutter Cleaning Cartersville GA
+User-agent: *
+Allow: /
+
+# Disallow private/utility file extensions
+Disallow: /*.json$
+Disallow: /*.log$
+
+# XML Sitemap location
+Sitemap: https://guttercleaningcartersvillega.com/sitemap.xml
+
+# LLM / AI context documentation
+# https://llmstxt.org
+User-agent: GPTBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+

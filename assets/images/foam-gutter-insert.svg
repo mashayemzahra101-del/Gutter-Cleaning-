@@ -1,0 +1,148 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%" height="100%">
+  <defs>
+    <!-- Sky / Ambient background -->
+    <linearGradient id="skyGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#E2E8F0"/>
+      <stop offset="100%" stop-color="#CBD5E1"/>
+    </linearGradient>
+
+    <!-- Roof Shingle Gradient -->
+    <linearGradient id="shingleGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#334155"/>
+      <stop offset="50%" stop-color="#1E293B"/>
+      <stop offset="100%" stop-color="#0F172A"/>
+    </linearGradient>
+
+    <!-- Fascia Board -->
+    <linearGradient id="fasciaGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#F8FAFC"/>
+      <stop offset="100%" stop-color="#E2E8F0"/>
+    </linearGradient>
+
+    <!-- Gutter Outer Metal -->
+    <linearGradient id="gutterGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="30%" stop-color="#F1F5F9"/>
+      <stop offset="70%" stop-color="#E2E8F0"/>
+      <stop offset="100%" stop-color="#94A3B8"/>
+    </linearGradient>
+
+    <!-- Foam Texture Filter -->
+    <filter id="foamTexture" x="0%" y="0%" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.65" numOctaves="4" result="noise"/>
+      <feColorMatrix type="matrix" values="0.33 0 0 0 0  0 0.33 0 0 0  0 0 0.33 0 0  0 0 0 1 0" in="noise" result="coloredNoise"/>
+      <feComposite in2="SourceGraphic" in="coloredNoise" operator="in" result="textured"/>
+      <feBlend in="SourceGraphic" in2="textured" mode="multiply"/>
+    </filter>
+
+    <!-- Foam Gradient -->
+    <linearGradient id="foamGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#334155"/>
+      <stop offset="40%" stop-color="#1E293B"/>
+      <stop offset="100%" stop-color="#0F172A"/>
+    </linearGradient>
+
+    <!-- Drop Shadow -->
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="8" stdDeviation="6" flood-opacity="0.25"/>
+    </filter>
+  </defs>
+
+  <!-- Background Environment -->
+  <rect width="800" height="450" fill="url(#skyGrad)"/>
+  
+  <!-- Siding / Wall in background -->
+  <rect x="0" y="160" width="800" height="290" fill="#F1F5F9"/>
+  <!-- Siding lap lines -->
+  <line x1="0" y1="210" x2="800" y2="210" stroke="#CBD5E1" stroke-width="3"/>
+  <line x1="0" y1="260" x2="800" y2="260" stroke="#CBD5E1" stroke-width="3"/>
+  <line x1="0" y1="310" x2="800" y2="310" stroke="#CBD5E1" stroke-width="3"/>
+  <line x1="0" y1="360" x2="800" y2="360" stroke="#CBD5E1" stroke-width="3"/>
+  <line x1="0" y1="410" x2="800" y2="410" stroke="#CBD5E1" stroke-width="3"/>
+
+  <!-- Fascia Board -->
+  <polygon points="0,110 800,110 800,210 0,210" fill="url(#fasciaGrad)"/>
+  <line x1="0" y1="210" x2="800" y2="210" stroke="#94A3B8" stroke-width="2"/>
+
+  <!-- Roof Overhang and Shingles -->
+  <polygon points="0,0 800,0 800,125 0,125" fill="url(#shingleGrad)"/>
+  <!-- Shingle texture layers -->
+  <polygon points="0,40 800,40 800,46 0,46" fill="#0F172A" opacity="0.6"/>
+  <polygon points="0,80 800,80 800,87 0,87" fill="#0F172A" opacity="0.6"/>
+  <polygon points="0,120 800,120 800,128 0,128" fill="#020617" opacity="0.8"/>
+  <!-- Shingle tabs vertical grooves -->
+  <path d="M120,40 L120,80 M340,40 L340,80 M560,40 L560,80 M720,40 L720,80" stroke="#0F172A" stroke-width="2" opacity="0.4"/>
+  <path d="M60,80 L60,120 M230,80 L230,120 M450,80 L450,120 M670,80 L670,120" stroke="#0F172A" stroke-width="2" opacity="0.4"/>
+  <!-- Drip edge metal flashing -->
+  <polygon points="0,124 800,124 800,132 0,132" fill="#E2E8F0"/>
+
+  <!-- Gutter Shadow on Fascia -->
+  <polygon points="0,130 800,130 800,165 0,165" fill="#0F172A" opacity="0.3"/>
+
+  <!-- GUTTER CHANNEL (3D Perspective View) -->
+  <!-- Back wall of gutter -->
+  <polygon points="40,135 760,135 760,260 40,260" fill="#94A3B8"/>
+
+  <!-- FOAM GUTTER INSERT (Triangular / Trapezoidal Porous Open-Cell Foam) -->
+  <g filter="url(#shadow)">
+    <!-- Foam Body inserted snug into gutter channel -->
+    <polygon points="40,140 760,140 760,245 40,245" fill="url(#foamGrad)" filter="url(#foamTexture)"/>
+    
+    <!-- Foam Top Surface with pores -->
+    <polygon points="40,140 760,140 730,158 70,158" fill="#334155" opacity="0.9"/>
+    
+    <!-- Foam Porous Texture detail dots -->
+    <g fill="#020617" opacity="0.45">
+      <circle cx="90" cy="148" r="2.5"/><circle cx="130" cy="146" r="3"/><circle cx="170" cy="151" r="2"/>
+      <circle cx="210" cy="147" r="3.5"/><circle cx="250" cy="150" r="2"/><circle cx="290" cy="146" r="3"/>
+      <circle cx="330" cy="152" r="2.5"/><circle cx="370" cy="148" r="3.5"/><circle cx="410" cy="146" r="2"/>
+      <circle cx="450" cy="151" r="3"/><circle cx="490" cy="147" r="2.5"/><circle cx="530" cy="149" r="3.5"/>
+      <circle cx="570" cy="145" r="2"/><circle cx="610" cy="151" r="3"/><circle cx="650" cy="148" r="2.5"/>
+      <circle cx="690" cy="150" r="3"/><circle cx="710" cy="146" r="2"/>
+
+      <circle cx="110" cy="180" r="3"/><circle cx="150" cy="205" r="3.5"/><circle cx="190" cy="190" r="2.5"/>
+      <circle cx="230" cy="220" r="3"/><circle cx="270" cy="185" r="2"/><circle cx="310" cy="210" r="3.5"/>
+      <circle cx="350" cy="195" r="3"/><circle cx="390" cy="215" r="2.5"/><circle cx="430" cy="180" r="3"/>
+      <circle cx="470" cy="225" r="3.5"/><circle cx="510" cy="190" r="2"/><circle cx="550" cy="210" r="3"/>
+      <circle cx="590" cy="185" r="2.5"/><circle cx="630" cy="215" r="3.5"/><circle cx="670" cy="195" r="2"/>
+    </g>
+
+    <!-- Water filtration effect / beads on foam -->
+    <g fill="#93C5FD" opacity="0.75">
+      <ellipse cx="140" cy="145" rx="5" ry="3"/>
+      <ellipse cx="260" cy="147" rx="6" ry="3.5"/>
+      <ellipse cx="380" cy="144" rx="4" ry="2.5"/>
+      <ellipse cx="500" cy="146" rx="7" ry="4"/>
+      <ellipse cx="620" cy="145" rx="5" ry="3"/>
+      <ellipse cx="680" cy="148" rx="4" ry="2.5"/>
+    </g>
+  </g>
+
+  <!-- Gutter Front Lip and Profile (White K-Style Gutter) -->
+  <polygon points="30,150 770,150 770,270 30,270" fill="url(#gutterGrad)" opacity="0.95" filter="url(#shadow)"/>
+  <!-- K-Style Gutter Contours -->
+  <polygon points="30,150 770,150 770,162 30,162" fill="#FFFFFF"/>
+  <line x1="30" y1="162" x2="770" y2="162" stroke="#CBD5E1" stroke-width="2"/>
+  <polygon points="30,185 770,185 770,195 30,195" fill="#E2E8F0"/>
+  <polygon points="30,250 770,250 770,270 30,270" fill="#94A3B8"/>
+  <line x1="30" y1="270" x2="770" y2="270" stroke="#64748B" stroke-width="3"/>
+
+  <!-- Gutter Bracket Clip / Hanger -->
+  <rect x="220" y="136" width="16" height="28" rx="3" fill="#64748B"/>
+  <rect x="520" y="136" width="16" height="28" rx="3" fill="#64748B"/>
+
+  <!-- Falling leaves shedding off top -->
+  <g opacity="0.9">
+    <!-- Sweetgum leaf -->
+    <path d="M 680,125 C 700,105 720,115 725,130 C 720,145 695,140 680,125 Z" fill="#D97706"/>
+    <!-- Oak leaf -->
+    <path d="M 180,135 C 195,120 220,125 225,138 C 215,150 190,145 180,135 Z" fill="#B45309"/>
+  </g>
+
+  <!-- Product Label Badge -->
+  <g transform="translate(40, 375)">
+    <rect width="210" height="42" rx="6" fill="#1B2A4A" opacity="0.92"/>
+    <rect x="0" y="0" width="6" height="42" rx="2" fill="#C8922A"/>
+    <text x="18" y="26" font-family="Inter, sans-serif" font-size="16" font-weight="700" fill="#FFFFFF">Foam Gutter Insert</text>
+  </g>
+</svg>
